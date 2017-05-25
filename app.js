@@ -41,5 +41,5 @@ function getEmojisPage(tabs) {
 }
 
 function run() {
-    chrome.tabs.query({ url: 'https://*.slack.com/customize/emoji' }, getEmojisPage);
+    chrome.tabs.query({ url: slackEmojiUrlPattern }, getEmojisPage);
 }
