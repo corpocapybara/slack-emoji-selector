@@ -1,4 +1,6 @@
-chrome.browserAction.onClicked.addListener(getEmojis);
+const slackEmojisRegex = /^http[s]?:\/\/[^:\/\s.]+\.slack\.com\/customize\/emoji$/;
+
+chrome.browserAction.onClicked.addListener(run);
 
 function setClipboardContent(content) {
     var copySrc = document.createElement('textarea');
@@ -13,4 +15,10 @@ function setClipboardContent(content) {
 
 function getEmojis(tab) {
     chrome.tabs.executeScript(tab.id, { file: 'page-script.js' }, (results) => setClipboardContent(results[0]));
+}
+
+function run(tab) {
+    if (slackEmojisRegex.test(tab.url)) {
+        getEmojis(tab);
+    }
 }

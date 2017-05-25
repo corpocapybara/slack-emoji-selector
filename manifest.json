@@ -23,6 +23,7 @@
   },
   "permissions": [
     "activeTab", 
-    "clipboardWrite"
+    "clipboardWrite",
+    "history"
   ]
 }
