@@ -1,0 +1,1 @@
+_.sample($(".emoji_row"), 10).map(el => $(el).children("td:nth-child(2)")[0].innerHTML.trim()).join(" ");
