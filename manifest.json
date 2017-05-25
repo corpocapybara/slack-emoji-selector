@@ -22,8 +22,9 @@
     "default_icon": "icon.png"
   },
   "permissions": [
-    "activeTab", 
+    "tabs", 
     "clipboardWrite",
-    "history"
+    "history",
+    "https://*.slack.com/customize/emoji"
   ]
 }
