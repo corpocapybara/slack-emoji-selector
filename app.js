@@ -1,5 +1,5 @@
-const slackEmojisRegex = /^http[s]?:\/\/[^:\/\s.]+\.slack\.com\/customize\/emoji$/;
-const slackEmojiUrlPattern = 'https://*.slack.com/customize/emoji';
+const slackEmojisRegex = /^http[s]?:\/\/[^:\/\s.]+\.slack\.com\/customize\/emoji/;
+const slackEmojiUrlPattern = 'https://*.slack.com/customize/emoji*';
 
 chrome.browserAction.onClicked.addListener(run);
 

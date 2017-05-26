@@ -13,7 +13,7 @@
 
   "content_scripts": [
     {
-      "matches": ["https://*.slack.com/customize/emoji"],
+      "matches": ["https://*.slack.com/customize/emoji*"],
       "js": ["underscore-min.1.8.3.js", "jquery-2.2.4.min.js"]
     }
   ],
@@ -25,6 +25,6 @@
     "tabs", 
     "clipboardWrite",
     "history",
-    "https://*.slack.com/customize/emoji"
+    "https://*.slack.com/customize/emoji*"
   ]
 }
